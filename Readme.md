@@ -17,12 +17,12 @@ No Geral foram Utilizadas essas Tecnologias:
       - SQLite
       - Cors
 
-`Obs: criada uma API REST com os conceitos sobre API RESTful, padrão MVC e boas práticas.`
+  `Obs: criada uma API REST com os conceitos sobre API RESTful, padrão MVC e boas práticas.`
 
-### Front-end
+  ### Front-end
 
       - HTML
       - CSS
       - React
 
-### Mobile
+  ### Mobile
