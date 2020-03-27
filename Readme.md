@@ -24,5 +24,8 @@ No Geral foram Utilizadas essas Tecnologias:
       - HTML
       - CSS
       - React
+      - axios
+
+  `Obs: criado o Front-end com os conceitos sobre SPA, Consumo de API e boas práticas.`
 
   ### Mobile
