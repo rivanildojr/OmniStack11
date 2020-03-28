@@ -17,6 +17,8 @@ No Geral foram Utilizadas essas Tecnologias:
       - SQLite
       - Cors
       - npm
+      - Celebrate (Validação)
+      - Jest e Supertest (Testes)
 
   `Obs: criada uma API REST com os conceitos sobre API RESTful, padrão MVC e boas práticas.`
 
