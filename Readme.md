@@ -16,6 +16,7 @@ No Geral foram Utilizadas essas Tecnologias:
       - Knex.js
       - SQLite
       - Cors
+      - npm
 
   `Obs: criada uma API REST com os conceitos sobre API RESTful, padrão MVC e boas práticas.`
 
@@ -25,7 +26,17 @@ No Geral foram Utilizadas essas Tecnologias:
       - CSS
       - React
       - axios
+      - yarn
 
   `Obs: criado o Front-end com os conceitos sobre SPA, Consumo de API e boas práticas.`
 
   ### Mobile
+
+      - CSS
+      - React Native
+      - Expo
+      - React Navigation v5
+      - axios
+      - yarn
+
+  `Obs: criado o Mobile com os conceitos sobre aplicações mobile com react native e expo, Consumo de API e boas práticas.`
