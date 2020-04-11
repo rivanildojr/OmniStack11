@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { FiPower, FiTrash2 } from "react-icons/fi";
+import { FiPower, FiTrash2, FiEdit } from "react-icons/fi";
 
 import api from "../../services/api";
 
@@ -20,10 +20,10 @@ export default function Profile() {
     api
       .get("profile", {
         headers: {
-          Authorization: ongId
-        }
+          Authorization: ongId,
+        },
       })
-      .then(response => {
+      .then((response) => {
         setIncidents(response.data);
       });
   }, [ongId]);
@@ -32,14 +32,18 @@ export default function Profile() {
     try {
       await api.delete(`incidents/${id}`, {
         headers: {
-          Authorization: ongId
-        }
+          Authorization: ongId,
+        },
       });
 
-      setIncidents(incidents.filter(incident => incident.id !== id));
+      setIncidents(incidents.filter((incident) => incident.id !== id));
     } catch (error) {
       alert("Erro ao deletar caso, tente novamente.");
     }
+  }
+
+  async function handleUpdateIncident() {
+    history.push("/incidents/new");
   }
 
   function handleLogout() {
@@ -65,7 +69,7 @@ export default function Profile() {
       <h1>Casos cadastrados</h1>
 
       <ul>
-        {incidents.map(incident => (
+        {incidents.map((incident) => (
           <li key={incident.id}>
             <strong>CASO:</strong>
             <p>{incident.title}</p>
@@ -77,9 +81,17 @@ export default function Profile() {
             <p>
               {Intl.NumberFormat("pt-BR", {
                 style: "currency",
-                currency: "BRL"
+                currency: "BRL",
               }).format(incident.value)}
             </p>
+
+            <button
+              className="-update"
+              onClick={() => handleUpdateIncident()}
+              type="button"
+            >
+              <FiEdit size={20} color="#DAA520" />
+            </button>
 
             <button
               onClick={() => handleDeleteIncident(incident.id)}
